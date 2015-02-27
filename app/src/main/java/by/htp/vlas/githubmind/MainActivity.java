@@ -40,7 +40,6 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             public void failure(RetrofitError error) {
-
             }
         });
 
@@ -48,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     private GitHubService getService() {
-        if(mGitHubService == null) {
+        if (mGitHubService == null) {
             RestAdapter.Builder builder = new RestAdapter.Builder();
             builder.setEndpoint("https://api.github.com");
             mGitHubService = builder.build().create(GitHubService.class);
